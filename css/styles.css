@@ -222,24 +222,27 @@ a:focus {
   background: #ff7143;
   box-shadow: 0px 32px 34px rgba(255, 112, 59, 0.317827);
   transition: 300ms;
-  cursor: pointer;
+  cursor: default;
 }
 
 .section3-block:hover h3,
 .section3-block:hover h4,
 .section3-block:hover p,
-.section3-block:hover div,
+.section3-block:hover button,
 .section3-block:focus h3,
 .section3-block:focus h4,
 .section3-block:focus p,
-.section3-block:focus div {
+.section3-block:focus button,
+.dark-btn:focus {
   color: #ffffff;
 }
 
-.section3-block:hover div,
-.section3-block:focus div {
+.section3-block:hover button,
+.section3-block:focus button,
+.dark-btn:focus {
   background: #9f3919;
   border: none;
+  cursor: pointer;
 }
 
 .section3 h3 {
@@ -292,6 +295,9 @@ a:focus {
   .wrapper {
     max-width: 970px;
   }
+  .section3-block {
+    min-width: 300px;
+    }
 }
 
 @media (max-width: 992px) {
@@ -312,6 +318,19 @@ a:focus {
   .section2 {
     gap: 100px;
   }
+  .section3 {
+    margin-bottom: 40px;
+  }
+  .section3-block {
+      min-width: 240px;
+  }
+  .section2-input {
+    min-width: 100%;
+    margin-bottom: 20px;
+  }
+  .section2 .btn {
+    min-width: 100%;
+  }
 }
 
 @media (max-width: 767px) {
@@ -323,42 +342,12 @@ a:focus {
     justify-content: center;
     gap: 20px;
   }
-  .section1 {
-    flex-direction: column-reverse;
-    margin-top: 50px;
-  }
-  .section3 {
-    margin-bottom: 20px;
-  }
-  .section3 h2 {
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  .section3-block {
-    width: 100%;
-  }
   .header ul, .footer ul {
     padding: 20px 0;
-    gap: 40px;
-  }
-  .section1 h1 {
-    font-size: 50px;
-    text-align: center;
-  }
-  .section2 h2, .section3 h2 {
-    font-size: 40px;
-    text-align: center;
-  } 
-  .section3 h4 {
-    font-size: 40px;
+    gap: 35px;
   }
   h3, p {
     text-align: center;
-  }
-  .section1-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
   }
   .btn {
     min-width: 100%;
@@ -369,8 +358,38 @@ a:focus {
     min-width: 0;
     margin: 20px auto 0;
   }
-.section2-input {
+  .section1 {
+    flex-direction: column-reverse;
+    margin-top: 50px;
+  }
+  .section1 h1 {
+    font-size: 50px;
+    text-align: center;
+  }
+  .section1-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .section2 h2, .section3 h2 {
+    font-size: 40px;
+    text-align: center;
+  } 
+  .section3 h4 {
+    font-size: 40px;
+  }
+  .section2-input {
   min-width: 100%;
   margin-bottom: 20px;
-}
+  }
+  .section3 {
+  margin-bottom: 20px;
+  }
+  .section3 h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  }
+  .section3-block {
+  width: 100%;
+  }
 }
