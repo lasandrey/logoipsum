@@ -1,18 +1,7 @@
-html,
-body {
-  height: 100%;
-}
-
 body {
   font-family: "DM Sans", sans-serif;
   margin: 0;
   padding: 0;
-}
-
-.body-wrapper {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 /* Global styles */
@@ -66,8 +55,6 @@ img {
 .header {
   background: rgba(255, 113, 67, 0.27);
   padding: 38px 0 48px 0;
-
-  flex: 0 0 auto;
 }
 
 ul {
@@ -96,10 +83,6 @@ a:focus {
   cursor: pointer;
   background: #ff5319;
   transition: 300ms;
-}
-
-.main {
-  flex: 1 0 auto;
 }
 
 /* Section 1 */
@@ -255,7 +238,6 @@ a:focus {
 
 .section3 h4 {
   font-size: 60px;
-  line-height: 56px;
   margin: 30px 0;
   color: #1d293f;
 }
@@ -287,8 +269,6 @@ a:focus {
 .footer {
   background: rgba(255, 113, 67, 0.27);
   padding: 50px;
-
-  flex: 0 0 auto;
 }
 
 @media (max-width: 1070px) {
@@ -297,7 +277,7 @@ a:focus {
   }
   .section3-block {
     min-width: 300px;
-    }
+  }
 }
 
 @media (max-width: 992px) {
@@ -322,7 +302,7 @@ a:focus {
     margin-bottom: 40px;
   }
   .section3-block {
-      min-width: 240px;
+    min-width: 240px;
   }
   .section2-input {
     min-width: 100%;
@@ -334,6 +314,12 @@ a:focus {
 }
 
 @media (max-width: 767px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
   .wrapper {
     max-width: none;
   }
@@ -342,17 +328,30 @@ a:focus {
     justify-content: center;
     gap: 20px;
   }
-  .header ul, .footer ul {
+  .header,
+  .footer {
+    padding: 20px 0 0;
+  }
+  .header ul,
+  .footer ul {
     padding: 20px 0;
     gap: 35px;
   }
-  h3, p {
+  .header .flex-conteiner,
+  .footer .flex-conteiner {
+    gap: 0;
+  }
+  h3,
+  p {
     text-align: center;
   }
   .btn {
     min-width: 100%;
     margin: 0;
     padding: 20px 50px;
+  }
+  .btn-orange {
+    display: none;
   }
   .dark-btn {
     min-width: 0;
@@ -363,7 +362,7 @@ a:focus {
     margin-top: 50px;
   }
   .section1 h1 {
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
   }
   .section1-buttons {
@@ -371,25 +370,23 @@ a:focus {
     flex-direction: column;
     gap: 20px;
   }
-  .section2 h2, .section3 h2 {
-    font-size: 40px;
+  .section2 h2,
+  .section3 h2 {
+    font-size: 30px;
     text-align: center;
-  } 
+    margin: 100px auto 20px;
+  }
   .section3 h4 {
-    font-size: 40px;
+    font-size: 30px;
   }
   .section2-input {
-  min-width: 100%;
-  margin-bottom: 20px;
+    min-width: 100%;
+    margin-bottom: 20px;
   }
   .section3 {
-  margin-bottom: 20px;
-  }
-  .section3 h2 {
-  margin-bottom: 20px;
-  text-align: center;
+    margin-bottom: 20px;
   }
   .section3-block {
-  width: 100%;
+    width: 100%;
   }
 }
